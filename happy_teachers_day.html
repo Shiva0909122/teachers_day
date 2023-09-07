@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="6">
+    <title>Teacher's Day Animation</title>
+    <style>
+        body {
+            background-color: #f2f2f2;
+            background-image: linear-gradient(orange, white, skyblue, green);
+            height: 100vh;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .teacher {
+            width: 200px;
+            height: 200px;
+            background-color: #FFD700;
+            border-radius: 50%;
+            position: relative;
+            animation-name: rotate;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+            top: 0;
+        }
+
+        .animation-helper {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .hand {
+            width: 100px;
+            height: 100px;
+            /* background-color: #FFF; */
+            border-radius: 50%;
+            /* position: absolute; */
+            bottom: 0;
+        }
+
+        .hand-left {
+            right: 10px;
+            transform-origin: bottom right;
+            animation-name: wobble;
+            animation-duration: 0.8s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+        }
+
+        .hand-right {
+            left: 10px;
+            transform-origin: bottom left;
+            animation-name: wobble;
+            animation-duration: 0.8s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+            animation-direction: reverse;
+        }
+
+        .message {
+            font-size: 38px;
+            font-weight: bold;
+            /* color: #FFF; */
+            position: absolute;
+            bottom: 70%;
+            left: 50%;
+            /* transform: translateX(-50%); */
+            
+        }
+
+        .heart {
+            font-size: 36px;
+            color: red;
+            animation-name: heartbeat;
+            animation-duration: 0.8s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            50% {
+                transform: rotate(180deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes wobble {
+            0% {
+                transform: rotate(-10deg);
+            }
+
+            50% {
+                transform: rotate(10deg);
+            }
+
+            100% {
+                transform: rotate(-10deg);
+            }
+        }
+
+
+        .quote {
+            top: 0;
+            width: 100%;
+            height: auto;
+            /* background: red; */
+            position: relative;
+            animation: mymove 4s ease-in-out alternate-reverse;
+            text-align: center;
+            margin: 5px;
+            padding: 10px;
+        }
+
+        @keyframes mymove {
+            0% {
+                top: 0px;
+                /* background-color: rgb(203, 11, 11); */
+                /* text-transform: capitalize; */
+                
+                /* font-size: larger; */
+            }
+
+            
+
+            20% {
+                top: 100px;
+                /* background-color: rgb(32, 160, 199); */
+            }
+
+            
+
+            60% {
+                top: 200px;
+                /* background-color: rgb(73, 238, 84); */
+            }
+
+
+            
+
+            100% {
+                top: 300px;
+                /* background-color: rgb(144, 42, 42); */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    
+    <div class="container">
+        <div class="quote">
+            <ul> 
+                
+                <li>"Teaching kids to count is fine, but teaching them what counts is best." - Bob Talbert</li> <br>
+                <li>"Education is not the filling of a pail but the lighting of a fire." - William Butler Yeats</li> <br>
+                <li>"The beautiful thing about learning is that no one can take it away from you." - B.B. Kin</li>       <br>     
+            </ul>
+        </div>
+        <div class="teacher">
+            <div class="animation-helper">
+                <div class="hand hand-left"></div>
+                <div class="hand hand-right"></div>
+            </div>
+            <div class="image">
+                <img src="https://static.vecteezy.com/system/resources/previews/000/617/064/original/happy-teachers-day-greeting-card-or-placard-on-green-chalk-board-in-sketchy-style-with-handdrawn-stars-and-hearts-vector.jpg"
+                    alt="teacher" height="200px" width="200px" style="border-radius: 50%;">
+            </div>
+
+        </div>
+
+        <div class="message">
+            Happy<br>
+            <span class="heart">&hearts;</span><br>
+            Teacher's Day!
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
